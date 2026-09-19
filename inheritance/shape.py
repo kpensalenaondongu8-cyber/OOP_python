@@ -18,6 +18,8 @@ class Square(Shape):
 
 all_in = Circle("circle", 4)
 all_o = Square("square", 4)
-print(all_in.area())
-print(all_o.area())                       
-        
+# print(all_in.area())
+# print(all_o.area())                       
+shapes = [all_in, all_o]
+for shape in shapes:
+    print(shape.area())        
