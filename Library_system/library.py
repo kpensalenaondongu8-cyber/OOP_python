@@ -3,7 +3,8 @@ class Book():
         self.title = title
         self.author = author
         self.is_checked_out = False
-
+    def __str__(self):
+       return f"{self.title} by {self.author}"    
            
 class Member():
     def __init__(self, name):
@@ -27,14 +28,14 @@ class Library:
 
 
 book1 = Book("Hobbit", "Tolkien")
+print(book1)
 member1 = Member("Thomas")
 library = Library()
 
 library.checkout(book1, member1)
 print(book1.is_checked_out)
-print(member1.borrowed_books)
 
-library.checkout(book1, member1)   
+print(member1.borrowed_books)
 
 library.return_book(book1, member1)
 print(book1.is_checked_out)
